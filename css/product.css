@@ -17,6 +17,7 @@ Base
 /* ＰＣファースト 指定以下に適用 */
 /* モバイルファースト */
 main .product .product_wrap {
+  margin-bottom: 50px;
   display: flex;
   gap: 50px;
 }
