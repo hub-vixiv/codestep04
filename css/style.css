@@ -1,0 +1,274 @@
+@charset "UTF-8";
+/*
+Theme Name:Tomomi-01
+Author: Office Niko
+Version 1.0.1
+*/
+/*--------------------
+Base
+----------------------*/
+/*example nav's background-color*/
+/*example button's background-dolor*/
+/*example button's font color*/
+/*example button's point color*/
+/* m = mobile */
+/* t = tablet */
+/* media mixin */
+/* ＰＣファースト 指定以下に適用 */
+/* モバイルファースト */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  scroll-behavior: smooth;
+  margin: 0 auto;
+  padding: 0;
+  color: #5B5D62;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: #5B5D62;
+}
+
+li {
+  list-style: none;
+  list-style-position: inside;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+.wrap {
+  width: 1360px;
+  max-width: 100%;
+  padding: 40px;
+  margin: 0 auto;
+}
+
+.section_title {
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+header .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 20px 40px;
+  height: 100px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .header .header_left h1 {
+  font-size: 1.5em;
+  color: #333333;
+}
+header .header .header_right {
+  display: flex;
+  align-items: center;
+}
+
+/*ハンバーガーボタン*/
+.open_btn {
+  z-index: 20;
+  position: relative; /*ボタン内側の基点となるためrelativeを指定*/
+  color: #333333;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+/*ボタン内側*/
+.open_btn span {
+  position: absolute;
+  display: inline-block;
+  transition: all 0.4s; /*アニメーションの設定*/
+  background: #333333;
+  width: 100%;
+}
+
+.open_btn span:nth-of-type(1) {
+  top: 15px;
+  height: 4px;
+}
+
+.open_btn span:nth-of-type(2) {
+  top: 32px;
+  height: 1px;
+}
+
+/*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
+.open_btn.active span:nth-of-type(1) {
+  top: 15px;
+  left: 0px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 100%;
+  background-color: #fff;
+}
+
+.open_btn.active span:nth-of-type(2) {
+  top: 30px;
+  left: 2px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: -120%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+nav.active {
+  left: 0;
+}
+nav ul {
+  position: fixed;
+  left: -100%;
+  padding-top: 60px;
+  padding-left: 100px;
+  transition: all 1s;
+}
+nav ul.active {
+  left: 0;
+}
+nav ul li {
+  height: 3em;
+}
+nav ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 1.3em;
+  color: #ffffff;
+}
+
+main {
+  width: 100%;
+  margin: 100px auto 0;
+}
+main .products .products_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+main .products .products_wrap .product_content {
+  width: 300px;
+}
+main .products .products_wrap .product_content .product_img {
+  width: 100%;
+  height: 300px;
+}
+main .products .products_wrap .product_content .product_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main .products .products_wrap .product_content .product_title {
+  margin-top: 10px;
+}
+main .products .products_wrap .product_content .price {
+  color: #333333;
+}
+main .products .page_navi_wrap {
+  margin: 50px auto;
+  text-align: center;
+}
+main .products .page_navi_wrap span {
+  padding: 0 40px;
+}
+main .products .page_navi_wrap span a:hover {
+  font-weight: bold;
+}
+main .btn_wrap {
+  text-align: center;
+}
+main .btn_wrap .view_more {
+  padding: 20px 40px;
+  display: inline-block;
+  margin: 80px auto;
+  color: #5B5D62;
+}
+main .about .about_wrap p {
+  margin: 30px 0;
+  width: 50%;
+  font-size: 1.2em;
+}
+main .company .company_wrap {
+  width: 600px;
+  padding: 0 10px;
+}
+main .company .company_wrap dl {
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1em;
+}
+main .company .company_wrap dl dt, main .company .company_wrap dl dd {
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+main .company .company_wrap dl dt {
+  width: 30%;
+}
+main .company .company_wrap dl dt:last-of-type {
+  border: none;
+}
+main .company .company_wrap dl dd {
+  width: 70%;
+}
+main .company .company_wrap dl dd:last-of-type {
+  border: none;
+}
+main .company .company_wrap .company_map iframe {
+  height: 300px;
+  filter: grayscale(100%);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+}
+footer .footer_left {
+  font-size: 2em;
+}
+footer .footer_copy {
+  font-size: 1em;
+  height: 2em;
+  line-height: 2em;
+}
+
+@media screen and (max-width: 900px) {
+  .wrap {
+    width: 100%;
+  }
+  main .products .products_wrap .product_content {
+    width: 300px;
+  }
+  main .about .about_wrap p {
+    width: 90%;
+  }
+}/*# sourceMappingURL=style.css.map */
