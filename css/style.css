@@ -171,6 +171,7 @@ main {
 main .products .products_wrap {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 main .products .products_wrap .product_content {
@@ -243,6 +244,7 @@ main .company .company_wrap dl dd:last-of-type {
 }
 main .company .company_wrap .company_map iframe {
   height: 300px;
+  width: 600px;
   filter: grayscale(100%);
 }
 
@@ -270,5 +272,20 @@ footer .footer_copy {
   }
   main .about .about_wrap p {
     width: 90%;
+    margin: 30px auto 0;
+  }
+  main .company .company_wrap dl {
+    display: block;
+  }
+  main .company .company_wrap dl dt {
+    border: none;
+    width: unset;
+  }
+  main .company .company_wrap .company_map {
+    width: 80vw;
+  }
+  main .company .company_wrap .company_map iframe {
+    width: 100%;
+    margin: 0 auto;
   }
 }/*# sourceMappingURL=style.css.map */

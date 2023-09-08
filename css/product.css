@@ -19,6 +19,7 @@ Base
 main .product .product_wrap {
   margin-bottom: 50px;
   display: flex;
+  justify-content: center;
   gap: 50px;
 }
 main .product .product_wrap .product_img_wrap {
