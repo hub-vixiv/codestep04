@@ -4,5 +4,5 @@
 
 デモサイトを見る時は、デベロッパーツールは使っていない
 
-https://hub-vixiv.github.io/pra_02/
+https://hub-vixiv.github.io/codestep04/
 
